@@ -10,11 +10,13 @@ import { AppComponent }  from './app.component';
 import { HeroesComponent }   from './heroes.component';
 
 import { HeroesService }          from './services/heroes.service';
+import { ItemsComponent }   from './items.component';
+import { SpellsComponent }   from './spells.component';
 import 'hammerjs';
 
 @NgModule({
   imports:      [ BrowserModule, MaterialModule, MdlModule, AppRoutingModule, HttpModule, ],
-  declarations: [ AppComponent, HeroesComponent ],
+  declarations: [ AppComponent, HeroesComponent, ItemsComponent, SpellsComponent ],
   providers: [ HeroesService ],
   bootstrap:    [ AppComponent ]
 })
