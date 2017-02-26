@@ -9,11 +9,12 @@ import { MdlModule } from "angular2-mdl";
 import { AppComponent }  from './app.component';
 import { HeroesComponent }   from './heroes.component';
 import { ItemsComponent }   from './items.component';
+import { SpellsComponent }   from './spells.component';
 import 'hammerjs';
 
 @NgModule({
   imports:      [ BrowserModule, MaterialModule, MdlModule, AppRoutingModule, HttpModule, ],
-  declarations: [ AppComponent, HeroesComponent,ItemsComponent ],
+  declarations: [ AppComponent, HeroesComponent,ItemsComponent,SpellsComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
