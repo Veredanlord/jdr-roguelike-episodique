@@ -14,8 +14,7 @@ constructor(public http: Http) {
     
   this.http.request('http://5.135.179.131/WS/ListEquipement.php/?callback=JSONP_CALLBACK')
             .subscribe((res: Response) => {
-                this.data = res.json();
-              
+                this.data = res.json();              
             }); }
         }
 

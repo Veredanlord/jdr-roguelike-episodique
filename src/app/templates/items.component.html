@@ -1,2 +1,15 @@
-<h1>derp!</h1>
- <pre>{{data | json}}</pre>
+<h1>Objet</h1>
+    <mdl-list  *ngFor="let item of data">
+  <mdl-list-item lines="3" mdl-ripple>
+    <mdl-list-item-primary-content>
+      <mdl-icon mdl-list-item-avatar></mdl-icon>
+      <span> {{item.Nom}}</span>
+      <mdl-list-item-text-body>
+       {{item.Effet}}
+      </mdl-list-item-text-body>
+    </mdl-list-item-primary-content>
+    <mdl-list-item-secondary-content>
+   Statistique : Force({{item.Force}}) Dexterite({{item.Dexterite}}) Intelligence({{item.Intelligence}}) Vitalite({{item.Vitalite}}))
+    </mdl-list-item-secondary-content>
+  </mdl-list-item>
+</mdl-list>
