@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'my-app',
-  templateUrl: 'app/templates/app.component.html'
+  templateUrl: 'templates/app.component.html'
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent  { 
+  name = 'JDR Rogue Like'; 
+}
