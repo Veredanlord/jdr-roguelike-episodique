@@ -1,13 +1,26 @@
-<a *ngFor="let hero of heroes">
-    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-    <div class="flipper">
-        <div class="front" ng-style="{'background-image':'url(/app/img/'+hero.Nom+'.jpg')}">
-        <span class="name">{{hero.Nom}}</span>
+<div class="heroesContainer">
+    <div *ngFor="let hero of heroes" class="container">
+        <div *ngIf="hero.Visible > 0" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+                <div class="front" [ngStyle]="{ 'background-image': 'url(app/img/' + hero.Nom + '.jpg)'}">
+                <span class="name">{{hero.Nom}}</span>
+                </div>
+                <div class="back">
+                <div class="back-logo"></div>
+                    <div class="back-logo" [ngStyle]="{ 'background-image': 'url(app/img/F' + hero.Nom + '.jpg)'}"></div>
+                </div>
+            </div>
         </div>
-        <div class="back">
-        <div class="back-logo"></div>
-            <div class="back-logo" ng-style="background-image:url(/app/img/Fhero.Nom.jpg);"></div>
+        <div *ngIf="hero.Visible == 0" class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+                <div class="front" [ngStyle]="{ 'background-image': 'url(app/img/H' + hero.Nom + '.jpg)'}">
+                <span class="name">???</span>
+                </div>
+                <div class="back">
+                <div class="back-logo"></div>
+                    <div class="back-logo" [ngStyle]="{ 'background-image': 'url(app/img/F.jpg)'}">
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-</a>
+</div>

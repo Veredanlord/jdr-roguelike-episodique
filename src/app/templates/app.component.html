@@ -1,4 +1,4 @@
-<div class="demo-container" mdl-shadow="2">
+<div mdl-shadow="2">
    <mdl-layout mdl-layout-fixed-header mdl-layout-header-seamed>
       <mdl-layout-header>
          <mdl-layout-header-row>
@@ -14,9 +14,10 @@
             <a class="mdl-navigation__link" [routerLink]="['/spells']">Spells</a>
          </nav>
       </mdl-layout-drawer>
-      <mdl-layout-content>
-         <!-- Your content goes here -->
+      <mdl-layout-content class="masterContainer">
+         <div class="contentContainer">
          <router-outlet></router-outlet>
+         </div>
       </mdl-layout-content>
    </mdl-layout>
 </div>

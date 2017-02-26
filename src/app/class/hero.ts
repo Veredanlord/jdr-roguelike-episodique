@@ -1,6 +1,6 @@
 export class Hero {
     constructor(
-        public Id: Date, 
+        public Id: number, 
         public Nom: string, 
         public Description:string,
         public visible:number,

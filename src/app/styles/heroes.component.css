@@ -120,3 +120,15 @@
 	   margin: auto;
     width: 90%;
 }
+
+.container{
+	width: 320px;
+	height: 427px;
+	margin: 1px;
+	display: inline-block;
+}
+
+.heroesContainer{
+	width: 100%;
+	margin: auto;
+}

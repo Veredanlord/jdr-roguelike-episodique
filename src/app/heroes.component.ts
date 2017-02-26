@@ -11,12 +11,19 @@ import { HeroesService } from './services/heroes.service';
     styleUrls: ['styles/heroes.component.css'],
 })
 
-export class HeroesComponent{
+export class HeroesComponent implements OnInit{
     heroes: Hero[];
+    errorMessage: string;
+    mode = 'Observable';
 
     constructor(private heroesService:HeroesService){}
 
-    ngOnInit(): void {
-    this.heroesService.getHeroes();
+    ngOnInit() { this.getHeroes();} 
+
+    getHeroes() {
+    this.heroesService.getHeroes()
+                     .subscribe(
+                       heroes => this.heroes = heroes,
+                       error =>  this.errorMessage = <any>error);
   }
 }
