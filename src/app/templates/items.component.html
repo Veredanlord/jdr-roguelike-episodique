@@ -1,6 +1,7 @@
 <h1>Objet</h1>
+<div>
     <mdl-list  *ngFor="let item of data">
-  <mdl-list-item lines="3" mdl-ripple>
+  <mdl-list-item lines="3" >
     <mdl-list-item-primary-content>
       <mdl-icon mdl-list-item-avatar></mdl-icon>
       <span> {{item.Nom}}</span>
@@ -10,6 +11,22 @@
     </mdl-list-item-primary-content>
     <mdl-list-item-secondary-content>
    Statistique : Force({{item.Force}}) Dexterite({{item.Dexterite}}) Intelligence({{item.Intelligence}}) Vitalite({{item.Vitalite}}))
+    <button mdl-button mdl-button-type="raised" id='{{item.IdEqui}}' (click)="delete($event)" >
+    supprimer 
+  </button>
     </mdl-list-item-secondary-content>
   </mdl-list-item>
 </mdl-list>
+
+
+
+<button
+        mdl-button
+        mdl-button-type="raised"
+        mdl-colored="primary"
+        mdl-ripple
+        (click)="showDialog($event)">Ajouter un objet</button>
+  <dialog-outlet></dialog-outlet>
+</div>
+
+ 

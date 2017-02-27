@@ -1,0 +1,33 @@
+<form [formGroup]="form">
+
+  <h3 class="mdl-dialog__title">Ajouter un objet</h3>
+
+  <div class="mdl-dialog__content">
+  <mdl-textfield #firstElement type="text" label="nom" formControlName="nom" floating-label></mdl-textfield>
+    <br/>
+    <mdl-textfield type="text" label="effet" formControlName="effet" floating-label></mdl-textfield>
+     <br/>
+   <mdl-textfield type="text" label="type" formControlName="type" floating-label></mdl-textfield>
+     <br/>
+    <mdl-textfield type="text" label="force" formControlName="force" floating-label></mdl-textfield>
+     <br/>
+    <mdl-textfield type="text" label="dexterite" formControlName="dexterite" floating-label></mdl-textfield>
+     <br/>
+    <mdl-textfield type="text" label="intelligence" formControlName="intelligence" floating-label></mdl-textfield>
+     <br/>
+    <mdl-textfield type="text" label="vitalite" formControlName="vitalite" floating-label></mdl-textfield>   
+  </div>
+  <div class="status-bar">
+    <p class="mdl-color-text--primary">{{statusMessage}}</p>
+    <mdl-spinner [active]="processingLogin"></mdl-spinner>
+  </div>
+
+  <div class="mdl-dialog__actions">
+    <button
+      type="button"
+      mdl-button (click)="add()"
+      [disabled]="!form.valid || processingLogin"
+      mdl-button-type="raised"
+      mdl-colored="primary" mdl-ripple>Ajouter</button>
+  </div>
+</form>
