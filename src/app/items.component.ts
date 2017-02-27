@@ -40,7 +40,7 @@ export class ItemsComponent {
   
   }
 
-public delete(event){
+public delete(event: any){
        var idAttr = event.srcElement.attributes.id;
     var value = idAttr.nodeValue;
       console.log('derp '+value);
