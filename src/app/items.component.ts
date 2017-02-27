@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Router }            from '@angular/router';
 import {Http, Response} from '@angular/http';
+
 @Component({
     moduleId: module.id,
     selector: 'items',
@@ -9,6 +10,7 @@ import {Http, Response} from '@angular/http';
 })
 
 export class ItemsComponent{
+  
  data: Object;
 constructor(public http: Http) {
     
