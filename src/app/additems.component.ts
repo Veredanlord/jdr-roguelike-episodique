@@ -6,11 +6,11 @@ import {
   Inject,
   OpaqueToken
 } from '@angular/core';
-import { LoginService } from './services/additems.service';
+
 import { FormGroup, Validators, FormControl, FormBuilder } from '@angular/forms';
 import { MdlTextFieldComponent } from 'angular2-mdl';
 import { MdlDialogReference } from 'angular2-mdl';
-import { Http }       from '@angular/http';
+import { Http } from '@angular/http';
 export const TEST_VALUE = new OpaqueToken('test value');
 
 
@@ -38,10 +38,6 @@ export class AddItemsComponent implements OnInit {
   public intelligence = new FormControl('', Validators.required);
   public vitalite = new FormControl('', Validators.required);
 
-
-
-
-
   public processingLogin = false;
   public statusMessage = '';
 
@@ -49,7 +45,7 @@ export class AddItemsComponent implements OnInit {
     private http: Http,
     private dialog: MdlDialogReference,
     private fb: FormBuilder,
-    private loginService: LoginService,
+
     @Inject(TEST_VALUE) testValue: string) {
 
     console.log(`injected test value: ${testValue}`);
@@ -69,8 +65,6 @@ export class AddItemsComponent implements OnInit {
 
   }
 
-
-
   public ngOnInit() {
     this.form = this.fb.group({
       'nom': this.nom,
@@ -84,15 +78,15 @@ export class AddItemsComponent implements OnInit {
 
     });
   }
-public add(){
-this.http
-.get('http://5.135.179.131/WS/AddEquipement.php/?nom='+this.nom.value+'&effet='+this.effet.value+'&type='+this.type.value+'&visible=0&Force='+this.force.value+'&Dexterite='+this.dexterite.value+'&Intelligence='+this.intelligence.value+'&Vitalite='+this.vitalite.value)
-.toPromise();
-this.dialog.onHide().subscribe((user) => {});
-}
+  public add() {
+    this.http
+      .get('http://5.135.179.131/WS/AddEquipement.php/?nom=' + this.nom.value + '&effet=' + this.effet.value + '&type=' + this.type.value + '&visible=0&Force=' + this.force.value + '&Dexterite=' + this.dexterite.value + '&Intelligence=' + this.intelligence.value + '&Vitalite=' + this.vitalite.value)
+      .toPromise();
+    this.dialog.hide();
+  }
 
 
- 
+
 
   @HostListener('keydown.esc')
   public onEsc(): void {

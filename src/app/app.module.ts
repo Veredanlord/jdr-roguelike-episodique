@@ -13,13 +13,13 @@ import { HeroesService }          from './services/heroes.service';
 import { ItemsComponent }   from './items.component';
 import { SpellsComponent }   from './spells.component';
 import { AddItemsComponent }   from './additems.component';
-import {LoginService }          from './services/additems.service';
+
 import 'hammerjs';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, MaterialModule, MdlModule, AppRoutingModule, HttpModule, ],
   declarations: [ AppComponent, HeroesComponent, ItemsComponent, SpellsComponent, AddItemsComponent ],
-  providers: [ HeroesService,LoginService ],
+  providers: [ HeroesService, ],
   bootstrap:    [ AppComponent ],
   entryComponents : [ AddItemsComponent ],
 })
