@@ -21,9 +21,9 @@ export class HeroesComponent implements OnInit{
     ngOnInit() { this.getHeroes();} 
 
     getHeroes() {
-    this.heroesService.getHeroes()
-                     .subscribe(
-                       heroes => this.heroes = heroes,
-                       error =>  this.errorMessage = <any>error);
-  }
+        this.heroesService.getHeroes()
+                        .subscribe(
+                        heroes => this.heroes = heroes,
+                        error =>  this.errorMessage = <any>error);
+    }
 }
