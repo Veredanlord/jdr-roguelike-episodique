@@ -13,12 +13,19 @@ import { HeroesService }          from './services/heroes.service';
 import { ItemsComponent }   from './items.component';
 import { SpellsComponent }   from './spells.component';
 import { AddItemsComponent }   from './additems.component';
+
 import { AddSpellsComponent }   from './addspells.component';
+
+import { HeroSheetComponent } from './herosheet.component';
+
+
 import 'hammerjs';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, MaterialModule, MdlModule, AppRoutingModule, HttpModule, ],
-  declarations: [ AppComponent, HeroesComponent, ItemsComponent, SpellsComponent, AddItemsComponent ,AddSpellsComponent],
+
+  declarations: [ AppComponent, HeroesComponent, ItemsComponent, SpellsComponent, AddItemsComponent, HeroSheetComponent,AddSpellsComponent ],
+
   providers: [ HeroesService, ],
   bootstrap:    [ AppComponent ],
   entryComponents : [ AddItemsComponent,AddSpellsComponent, ],

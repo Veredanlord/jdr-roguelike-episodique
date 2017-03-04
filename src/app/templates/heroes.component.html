@@ -2,25 +2,25 @@
     <div *ngFor="let hero of heroes" class="container">
         <div *ngIf="hero.Visible > 0" class="flip-container" ontouchstart="this.classList.toggle('hover');">
             <div class="flipper">
-                <div class="front" [ngStyle]="{ 'background-image': 'url(app/img/' + hero.Nom + '.jpg)'}">
+                <div class="front" [ngStyle]="{ 'background-image': 'url(app/img/' + hero.Nom + '.jpg)'}" [routerLink]="['/' + hero.Id]">
                 <span class="name">{{hero.Nom}}</span>
                 </div>
                 <div class="back">
                 <div class="back-logo"></div>
-                    <div class="back-logo" [ngStyle]="{ 'background-image': 'url(app/img/F' + hero.Nom + '.jpg)'}"></div>
+                    <div class="back-logo" [ngStyle]="{ 'background-image': 'url(app/img/F' + hero.Nom + '.jpg)'}" [routerLink]="['/' + hero.Id]"></div>
                 </div>
             </div>
         </div>
         <div *ngIf="hero.Visible == 0" class="flip-container" ontouchstart="this.classList.toggle('hover');">
             <div class="flipper">
-                <div class="front" [ngStyle]="{ 'background-image': 'url(app/img/H' + hero.Nom + '.jpg)'}">
+                <div class="front" [ngStyle]="{ 'background-image': 'url(app/img/H' + hero.Nom + '.jpg)'}" [routerLink]="['/' + hero.Id]">
                 <span class="name">???</span>
                 </div>
                 <div class="back">
                 <div class="back-logo"></div>
-                    <div class="back-logo" [ngStyle]="{ 'background-image': 'url(app/img/F.jpg)'}">
+                    <div class="back-logo" [ngStyle]="{ 'background-image': 'url(app/img/F.jpg)'}" [routerLink]="['/' + hero.Id]">
+                </div>
                 </div>
             </div>
         </div>
-    </div>
 </div>
