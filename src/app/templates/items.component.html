@@ -1,26 +1,27 @@
 <h1>Objet</h1>
 <div>
   <mdl-list *ngFor="let item of data">
-    <mdl-list-item lines="3">
-      <mdl-list-item-primary-content> <div style="float:left;"><img  src="/app/img/ressource/type{{item.Type}}.png" /></div>
-       
+    <mdl-list-item id="#{{item.IdEqui}}" lines="3">
+      <mdl-list-item-primary-content> <div style="float:left;"><img  src="/app/img/ressource/type{{item.Type}}.png" /></div>       
         <span> {{item.Nom}}</span>
         <mdl-list-item-text-body>
           {{item.Effet}}
         </mdl-list-item-text-body>
       </mdl-list-item-primary-content>
       <mdl-list-item-secondary-content>
-        <span>
-    <img  src="/app/img/ressource/str.png" /> {{item.Force}}   
-    <img  src="/app/img/ressource/dex.png" /> {{item.Dexterite}}   
-    <img  src="/app/img/ressource/int.png" />{{item.Intelligence}}  
-    <img  src="/app/img/ressource/vita.png" /> {{item.Vitalite}}
+        <span>          
+    <img src="/app/img/ressource/str.png" mdl-tooltip="Froce"/> {{item.Force}}   
+    <img  src="/app/img/ressource/dex.png" mdl-tooltip-large="Dextérité"/> {{item.Dexterite}}   
+    <img  src="/app/img/ressource/int.png" mdl-tooltip-large="Intelligence"/>{{item.Intelligence}}  
+    <img  src="/app/img/ressource/vita.png" mdl-tooltip-large="Vitalité"/> {{item.Vitalite}}
+ 
    </span>
         <img class="button" mdl-ripple src="/app/img/ressource/delete.png" id='{{item.IdEqui}}' (click)="delete($event)" />
-
+<img class="button" mdl-ripple src="/app/img/ressource/vita.png" id='{{item.IdEqui}}' (click)="showUpdateDialog($event,item.Nom,item.Type,item.Effet,item.Force,item.Dexterite,item.Intelligence,item.Vitalite)" />
       </mdl-list-item-secondary-content>
+        
     </mdl-list-item>
-    <div style="background-color: #828282 ; height: 1px"></div>
+  <div id="#{{item.IdEqui}}" style="background-color: #828282 ; height: 1px"></div>
   </mdl-list>
 
 

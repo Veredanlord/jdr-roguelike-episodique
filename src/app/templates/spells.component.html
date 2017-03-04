@@ -1,1 +1,24 @@
 <h1>Spells!</h1>
+<div>
+  <mdl-list *ngFor="let spell of data">
+    <mdl-list-item lines="3">
+      <mdl-list-item-primary-content> <div style="float:left;"></div>       
+        <span> {{spell.Nom}}</span>
+        <mdl-list-item-text-body>
+          {{spell.Effet}}
+        </mdl-list-item-text-body>
+      </mdl-list-item-primary-content>
+      <mdl-list-item-secondary-content>
+     
+        <img class="button" mdl-ripple src="/app/img/ressource/delete.png" id='' (click)="delete($event)" />
+
+      </mdl-list-item-secondary-content>
+    </mdl-list-item>
+    <div style="background-color: #828282 ; height: 1px"></div>
+  </mdl-list>
+
+
+
+  <button mdl-button mdl-button-type="raised" mdl-colored="primary" mdl-ripple (click)="showDialog($event)">Ajouter un objet</button>
+  <dialog-outlet></dialog-outlet>
+</div>

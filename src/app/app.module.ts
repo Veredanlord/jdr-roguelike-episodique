@@ -13,14 +13,14 @@ import { HeroesService }          from './services/heroes.service';
 import { ItemsComponent }   from './items.component';
 import { SpellsComponent }   from './spells.component';
 import { AddItemsComponent }   from './additems.component';
-
+import { AddSpellsComponent }   from './addspells.component';
 import 'hammerjs';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, MaterialModule, MdlModule, AppRoutingModule, HttpModule, ],
-  declarations: [ AppComponent, HeroesComponent, ItemsComponent, SpellsComponent, AddItemsComponent ],
+  declarations: [ AppComponent, HeroesComponent, ItemsComponent, SpellsComponent, AddItemsComponent ,AddSpellsComponent],
   providers: [ HeroesService, ],
   bootstrap:    [ AppComponent ],
-  entryComponents : [ AddItemsComponent ],
+  entryComponents : [ AddItemsComponent,AddSpellsComponent, ],
 })
 export class AppModule { }

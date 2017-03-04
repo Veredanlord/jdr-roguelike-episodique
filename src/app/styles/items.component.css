@@ -2,3 +2,15 @@
 
      cursor: pointer;
 }
+
+.mdl-tooltip {
+    will-change: unset;
+}
+
+
+.mdl-tooltip is-active {
+    animation: none;
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
