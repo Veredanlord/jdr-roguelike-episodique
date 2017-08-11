@@ -29,5 +29,5 @@ import 'hammerjs';
   providers: [ HeroesService, ],
   bootstrap:    [ AppComponent ],
   entryComponents : [ AddItemsComponent,AddSpellsComponent, ],
-});
+})
 export class AppModule { }
